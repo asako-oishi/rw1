@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thoughts on Responsive Design &amp; Sass</title>
+
+  <link rel="stylesheet" type="text/css" href="wks.css">
+  <link href='http://fonts.googleapis.com/css?family=Questrial|Muli:300' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- use the responsive css template! -->
+  <!-- https://gist.github.com/jpetto/5024893/raw/d9c14600de53df64f007f5932f4f200683a724d5/base.css -->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('p.six').hide();
+    $("p.seven").hide();
+    $('a.two').hide();
+
+
+    $('a.one').click(function(){
+      $('p.first').toggle(800);
+      $('p.second').toggle(800);
+      $('p.third').toggle(800);
+      $('p.forth').toggle(800);
+      $('p.fifth').toggle(800);
+      event.preventDefault;
+
+      $('a.two').show();
+
+      $('body').css('background', '#E4F7F3');
+
+    });
+
+      $('a.two').click(function(){
+      $('p.six').toggle(800);
+      $('p.seven').toggle(800);
+      event.preventDefault;
+
+      $('a.three').show();
+
+      $('body').css('background', '#F5EFE4');
+
+    });
+
+
+  });
+  </script>
+
+</head>
+<body>
+ <div class = "wrapper">
+<header class="header">
+  <h1 class="h1">Thoughts on Responsive Design &amp; Sass</h1>
+</header>
+ 
+<article class="thoughts">
+  <header class="header">
+    <!-- pick one - should or should not and defend your position. -->
+    <h1><a class="one" href = "#">Why You Should Use Sass</a></h1>
+  </header>
+ 
+  <!-- at least 2 paragraphs here -->
+  <p class = "first">
+    There are some persistent problems with traditional CSS; it's not able to reuse a collection of rules in multiple selectors, unavailability of variables. Primary, this is because CSS has its own feature set, which might not be enough to create a clean and reusable rules. Each time we have to specify a color for a block of content or an image border, and every time we want to change the color, we have to write exact same code everywhere. This lack of built-in support for object oriented styles is a huge disadvantage of using traditional CSS. To over come these limitations, Sass preprocessor offers an advanced way of writing CSS, which expands its basic functionalities: Nesting, Variables, Mixins, and Selector Inheritance.
+  </p>
+  
+  <p class = "second">
+    Sass allows us to nest almost any kinds of code. It's not requirement when writing code with Sass, however this feature is a more concise way to write CSS. With Sass, we can save ourselves from the trouble of creating a separate declaration block and this can be used to apply media queries to specific items. Nesting cuts down on the necessary repetition of the selectors and reduce our efforts to write CSS code.
+  </p>
+
+  <p class = "third">
+    SASS allows us to define variables that are reusable throughout our entire project. This is huge benefit for creating web pages and manage them when working with colors and sizes. With SASS, we can simply declare a variable name as $red: #b80000. Any time we needed to use this color, instead of writing hex value, we just write the code $red and whenever we want to alter the hex value, only we need is to change the variable reference instead of changing every hex codes. 
+  </p>
+
+  <p class = "forth">
+    Other benefit of using SASS over the traditional CSS is Mixin. It allows us to define patterns for reuse in little space. The most common CSS can be abstracted to a Mixin and included as needed across the project, which helps us to create framework. Although, Mixin looks a little too much abstruction for readability, it's powerful especially because Mixin can take arguemnts and we can use them as more advanced features to implement some great complex styles. 
+  </p>
+
+  <p class = "fifth">Lastly, the reason why we should use SASS is because it also allows us to inherit the style from different selectors. @extend property gives use the same functionality as Mixins, but inheritance tells compiler to add the extended class to a list of a class attached to the extend class.</br>
+  Sass makes our styling code shorter, clearer, and maintainable. It is no doubt that SASS is powerful tool and it provides so many features to CSS developtment. With SASS, we can write DRY code and create a lean stylesheet which save our time to write CSS and edit them, which is why we need to use SASS to write more structural CSS.</p>
+</article>
+ 
+<article class="thoughts">
+  <header class="header">
+    <h2><a class= "two" href = "#">Why Your Need A Responsive Site</a></h2>
+  </header>
+ 
+  <!-- at least 2 paragraphs here -->
+  <p class ="six">Tablet sales are expected to exceed 100 million this year, and with this arrival of smart phones and tablets, the responsive design is a solution that uses a flexible grid instead of investing in various of a website for all those different devices. Depending on the screen resolution, the design of contents are positioned differently on the page with use of media queries to figure out what resolution of device it's being served on. Responsive site allows us to serve all our visitors the page they need.</p>
+  
+  <p class = "seven">There are some qualities of a responsive site to use rather than building apps for different platforms:adjustable and flexible.Responsive web site displays appropriately on every screen size based on the width, by using only one set of code. This use of media query to adjust the layout style commonly used to developers to change the number of sites. The second quality is flexibility. It allows the elements on the page to expand to fill available space. By specify the page width in percentages rather than a fixed number of pixels and allowing the images to stretch down in size to fit inside the columns no matter what size the screen is. These qualities allow our website to work everywhere and no matter how many people went for smartphones or other tablets that have different platforms, everyone is able to access our web site thanks to responsive site which is the primary reason why we need the responsive site.</p>
+</article>
+</div>
+ 
+</body>
+</html>
